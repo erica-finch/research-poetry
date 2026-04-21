@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="game-board"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    
+    <header>
+        <h1>Magnetic Research Poetry</h1>
+        <p>Drag words to create a poem. Click a word to see the research behind it.</p>
+    </header>
+
+    <main id="game-container">
+        <div id="workspace"></div>
+
+        <aside id="info-panel">
+            <h2>Research Citations</h2>
+            <div id="citation-display">
+                <p class="placeholder">Click a word tile to explore related papers.</p>
+                <ul id="citation-list"></ul>
+            </div>
+            
+            <div class="controls">
+                <button id="refresh-btn">Refresh Words</button>
+                <button id="share-btn">Share Poem</button>
+            </div>
+        </aside>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
