@@ -9,19 +9,34 @@
 <body>
 
     <header>
-        <h1>Poetry in Research</h1>
-        <p>Drag words to create a poem. Click a word to see the research behind it.</p>
+        <div class="header-content">
+            <h1>Poetry in Research</h1>
+            <p>Drag words to create a poem. Click a word to see the research behind it.</p>
+        </div>
+        <nav class="top-nav">
+            <a href="https://github.com/erica-finch/research-poetry/" target="_blank">About</a>
+        </nav>
     </header>
 
     <main id="game-container">
         <div id="workspace"></div>
 
         <aside id="info-panel">
-            <h2>Research Citations</h2>
-            <div id="citation-display">
-                <p class="placeholder">Click a word tile to explore related papers.</p>
-                <ul id="citation-list"></ul>
-            </div>
+            <section class="citation-section">
+                <h2>Research Citations</h2>
+                <div id="citation-display">
+                    <p class="placeholder">Click a word tile to explore related papers.</p>
+                    <ul id="citation-list"></ul>
+                </div>
+            </section>
+
+            <section class="resource-section">
+                <h3>Explore More</h3>
+                <nav class="resource-links">
+                    <a href="https://libguides.nosm.ca/" target="_blank">NOSM U Faculty Publications</a>
+                    <a href="#" id="view-bibliography">Full Bibliography</a>
+                </nav>
+            </section>
             
             <div class="controls">
                 <button id="refresh-btn">Refresh Words</button>
