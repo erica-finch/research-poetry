@@ -1,6 +1,6 @@
 // Configuration and State
 let wordIndex = {};
-const fillerWords = ['the', 'is', 'and', 'of', 'in', 'to', 'with', 'a', 'on', 'for', 'at', 'by', 'from', 'it', 'was'];
+const fillerWords = ['the', 'the', 'is', 'is', 'and', 'and', 'of', 'in', 'to', 'with', 'a', 'on', 'for', 'at', 'by', 'from', 'it', 'was', 'ing', 's'];
 const workspace = document.getElementById('workspace');
 const citationList = document.getElementById('citation-list');
 const placeholder = document.querySelector('.placeholder');
