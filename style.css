@@ -84,6 +84,7 @@ header {
 .header-nav a:hover {
     background-color: #002857;
     border-color: #002857;
+    filter: brightness(1.5);
 }
 
 /* 3. Main Content Area */
