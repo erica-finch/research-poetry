@@ -28,13 +28,15 @@ async function initGame() {
 function loadSharedPoem(encodedData) {
     try {
         const boardState = JSON.parse(atob(encodedData));
-        workspace.innerHTML = ''; // Clear the default board
+        workspace.innerHTML = ''; 
         
         boardState.forEach(data => {
-            const tile = createTile(data.w);
-            // Anchor the tile to its saved coordinates
-            tile.style.left = `${data.x}px`;
-            tile.style.top = `${data.y}px`;
+            // Destructure the array: first item is word, second is x, third is y
+            const [word, x, y] = data; 
+            
+            const tile = createTile(word);
+            tile.style.left = `${x}px`;
+            tile.style.top = `${y}px`;
         });
     } catch (e) {
         console.error("Invalid share link. Loading random board.", e);
@@ -132,22 +134,23 @@ document.getElementById('share-btn').addEventListener('click', () => {
     const boardState = [];
 
     tiles.forEach(tile => {
-        boardState.push({
-            w: tile.innerText,
-            x: parseInt(tile.style.left),
-            y: parseInt(tile.style.top)
-        });
+        // Store as [word, x, y] to save character space
+        boardState.push([
+            tile.innerText, 
+            parseInt(tile.style.left), 
+            parseInt(tile.style.top)
+        ]);
     });
 
-    // Serialize the array to a string and encode to Base64 to keep URL clean
+    // Convert the array to a string and encode
     const serialized = btoa(JSON.stringify(boardState));
     const shareUrl = `${window.location.origin}${window.location.pathname}?poem=${serialized}`;
 
-    // Copy the generated URL to the clipboard
     navigator.clipboard.writeText(shareUrl).then(() => {
-        alert("Your poem link has been copied to the clipboard!");
-    }).catch(err => {
-        console.error("Could not copy text: ", err);
+        const shareBtn = document.getElementById('share-btn');
+        const originalText = shareBtn.innerText;
+        shareBtn.innerText = "Link Copied!";
+        setTimeout(() => { shareBtn.innerText = originalText; }, 2000);
     });
 });
 
