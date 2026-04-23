@@ -31,12 +31,24 @@ function loadSharedPoem(encodedData) {
         workspace.innerHTML = ''; 
         
         boardState.forEach(data => {
-            // Destructure the array: first item is word, second is x, third is y
             const [word, x, y] = data; 
-            
             const tile = createTile(word);
-            tile.style.left = `${x}px`;
-            tile.style.top = `${y}px`;
+
+            // MOBILE SAFETY CHECK:
+            // If the saved X or Y position is wider/taller than the current screen,
+            // reset it to a safe default (10px) so the user can see and move it.
+            let finalX = x;
+            let finalY = y;
+
+            if (x > (workspace.clientWidth - 50)) {
+                finalX = 10; 
+            }
+            if (y > (workspace.clientHeight - 30)) {
+                finalY = 10;
+            }
+
+            tile.style.left = `${finalX}px`;
+            tile.style.top = `${finalY}px`;
         });
     } catch (e) {
         console.error("Invalid share link. Loading random board.", e);
