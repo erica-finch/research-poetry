@@ -10,12 +10,37 @@ async function initGame() {
     try {
         const response = await fetch('./data/word_data.json');
         wordIndex = await response.json();
-        generateBoard();
+
+        // Check URL for shared data
+        const urlParams = new URLSearchParams(window.location.search);
+        const sharedData = urlParams.get('poem');
+
+        if (sharedData) {
+            loadSharedPoem(sharedData);
+        } else {
+            generateBoard();
+        }
     } catch (error) {
-        console.error("Error loading game data:", error);
+        console.error("Error initializing game:", error);
     }
 }
 
+function loadSharedPoem(encodedData) {
+    try {
+        const boardState = JSON.parse(atob(encodedData));
+        workspace.innerHTML = ''; // Clear the default board
+        
+        boardState.forEach(data => {
+            const tile = createTile(data.w);
+            // Anchor the tile to its saved coordinates
+            tile.style.left = `${data.x}px`;
+            tile.style.top = `${data.y}px`;
+        });
+    } catch (e) {
+        console.error("Invalid share link. Loading random board.", e);
+        generateBoard();
+    }
+}
 // 2. Select Words and Create Tiles
 function generateBoard() {
     workspace.innerHTML = ''; // Clear current board
@@ -32,23 +57,23 @@ function generateBoard() {
     });
 }
 
-// 3. Create a Draggable Tile
 function createTile(word) {
     const tile = document.createElement('div');
     tile.classList.add('tile');
     tile.innerText = word;
 
-    // Random initial position
+    // Default random position (will be overridden if loading a shared poem)
     const x = Math.random() * (workspace.clientWidth - 100);
     const y = Math.random() * (workspace.clientHeight - 40);
     tile.style.left = `${x}px`;
     tile.style.top = `${y}px`;
 
-    // Interaction Events
     tile.addEventListener('mousedown', startDrag);
+    tile.addEventListener('touchstart', startDrag, { passive: false });
     tile.addEventListener('click', () => showCitations(word));
 
     workspace.appendChild(tile);
+    return tile; // CRITICAL: This allows other functions to manipulate the tile
 }
 
 // 4. Drag Logic
@@ -102,6 +127,29 @@ function showCitations(word) {
 
 // Event Listeners for Buttons
 document.getElementById('refresh-btn').addEventListener('click', generateBoard);
+document.getElementById('share-btn').addEventListener('click', () => {
+    const tiles = document.querySelectorAll('.tile');
+    const boardState = [];
+
+    tiles.forEach(tile => {
+        boardState.push({
+            w: tile.innerText,
+            x: parseInt(tile.style.left),
+            y: parseInt(tile.style.top)
+        });
+    });
+
+    // Serialize the array to a string and encode to Base64 to keep URL clean
+    const serialized = btoa(JSON.stringify(boardState));
+    const shareUrl = `${window.location.origin}${window.location.pathname}?poem=${serialized}`;
+
+    // Copy the generated URL to the clipboard
+    navigator.clipboard.writeText(shareUrl).then(() => {
+        alert("Your poem link has been copied to the clipboard!");
+    }).catch(err => {
+        console.error("Could not copy text: ", err);
+    });
+});
 
 // Initial start
 initGame();
