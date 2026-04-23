@@ -107,6 +107,8 @@ header {
     box-shadow: 2px 2px 0px rgba(13, 33, 52, 0.2); 
     white-space: nowrap;
     transition: transform 0.05s ease, box-shadow 0.1s ease;
+    touch-action: none; /* Critical: Prevents the page from scrolling while dragging a tile */
+}
 }
 
 .tile:hover {
@@ -212,4 +214,40 @@ button {
 
 #share-btn:hover {
     background-color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #game-container {
+        flex-direction: column; /* Stack workspace on top of sidebar */
+        overflow-y: auto;
+    }
+
+    #workspace {
+        height: 60vh; /* Give the fridge a fixed height on mobile */
+        min-height: 400px;
+        width: 100%;
+        border-bottom: 2px solid #dee2e6;
+    }
+
+    #info-panel {
+        width: 100%; /* Sidebar takes full width below the fridge */
+        height: auto;
+        border-left: none;
+        padding: 1rem;
+    }
+
+    .header-branding h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-container {
+        flex-wrap: wrap; /* Allow nav links to stack if they're too wide */
+        gap: 5px;
+    }
+
+    .header-nav a {
+        padding: 0.6rem 1rem;
+        font-size: 0.7rem;
+    }
 }
