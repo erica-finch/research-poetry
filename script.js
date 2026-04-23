@@ -81,10 +81,13 @@ function createTile(word) {
 // 4. Drag Logic
 function startDrag(e) {
     const tile = e.target;
-    let shiftX = e.clientX - tile.getBoundingClientRect().left;
-    let shiftY = e.clientY - tile.getBoundingClientRect().top;
+    // Handle both Mouse and Touch events
+    const event = e.type.includes('touch') ? e.touches[0] : e;
+    
+    let shiftX = event.clientX - tile.getBoundingClientRect().left;
+    let shiftY = event.clientY - tile.getBoundingClientRect().top;
 
-    tile.style.zIndex = 1000; // Move to front
+    tile.style.zIndex = 1000;
 
     function moveAt(pageX, pageY) {
         let newX = pageX - workspace.getBoundingClientRect().left - shiftX;
@@ -94,16 +97,25 @@ function startDrag(e) {
         tile.style.top = `${newY}px`;
     }
 
-    function onMouseMove(e) {
-        moveAt(e.pageX, e.pageY);
+    function onMove(e) {
+        const moveEvent = e.type.includes('touch') ? e.touches[0] : e;
+        moveAt(moveEvent.pageX, moveEvent.pageY);
     }
 
-    document.addEventListener('mousemove', onMouseMove);
+    // Add listeners to document so dragging doesn't "break" if mouse moves too fast
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('touchmove', onMove, { passive: false });
 
-    document.onmouseup = function() {
-        document.removeEventListener('mousemove', onMouseMove);
-        tile.onmouseup = null;
-    };
+    function stopDrag() {
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('touchmove', onMove);
+        document.removeEventListener('mouseup', stopDrag);
+        document.removeEventListener('touchend', stopDrag);
+        tile.style.zIndex = ""; // Optional: reset z-index or keep it high
+    }
+
+    document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('touchend', stopDrag);
 }
 
 // 5. Citation Logic
