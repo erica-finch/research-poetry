@@ -8,22 +8,26 @@
 </head>
 <body>
 
-    <header>
-        <div class="header-content">
-            <h1>Poetry in Research</h1>
-            <p>Drag words to create a poem. Click a word to see the research behind it.</p>
-        </div>
-        <nav class="top-nav" align="right">
-            <a href="https://github.com/erica-finch/research-poetry/" target="_blank">About</a>
-        </nav>
-    </header>
+<header>
+    <div class="header-branding">
+        <h1>Poetry in Research</h1>
+        <p>Drag words to create a poem. Click a word to see the research behind it.</p>
+    </div>
 
+    <nav class="header-nav">
+        <div class="nav-container">
+            <a href="https://github.com/erica-finch/research-poetry" target="_blank">About</a>
+            <a href="https://libraryguides.nosm.ca/AnnFacPubs" target="_blank">Explore more research from NOSM U</a>
+            <a href="bibliography.html" target="_blank">Game bibliography</a>
+        </div>
+    </nav>
+</header>
     <main id="game-container">
         <div id="workspace"></div>
 
         <aside id="info-panel">
             <section class="citation-section">
-                <h2>Research Citations</h2>
+                <h2>Citations</h2>
                 <div id="citation-display">
                     <p class="placeholder">Click a word tile to explore related papers.</p>
                     <ul id="citation-list"></ul>
@@ -36,12 +40,6 @@
             </div>
         </aside>
     </main>
-    
-    <div id="biblography">
-            <h2>Game Bibliography</h2>
-            <p>This game is powered by research from NOSM University faculty. Browse the full list of the articles used to generate the word bank.</p>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
