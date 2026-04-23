@@ -6,7 +6,6 @@
 }
 
 body {
-    /* Reverted to system-standard sans-serif stack */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
@@ -16,69 +15,89 @@ body {
     overflow: hidden;
 }
 
-/* Reset Header to stack vertically */
+/* 2. Unified Header (Consolidated Branding & Nav) */
 header {
-    display: block;
-    padding: 0;
-    border-bottom: none;
+    background-color: #0d2134;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column; /* Stacked on mobile by default */
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 4px solid #002857;
+    z-index: 10;
 }
 
-/* 1. The Branding Bar (Lighter Blue: #002857) */
+/* Row layout for desktop */
+@media (min-width: 850px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
 .header-branding {
-    background-color: #002857; 
-    padding: 1.2rem 2rem;
-    color: #ffffff;
     text-align: center;
 }
 
+@media (min-width: 850px) {
+    .header-branding {
+        text-align: left;
+    }
+}
+
 .header-branding h1 {
-    font-size: 1.6rem;
-    margin-bottom: 0.15rem;
-    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.5px;
 }
 
 .header-branding p {
-    font-size: 0.85rem;
-    color: #ffffff;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 300;
 }
 
-/* 2. The Navigation Bar (Darker Blue: #0d2134) */
-.header-nav {
-    background-color: #0d2134; 
-    padding: 0; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
+/* Nav Links as UI Buttons */
 .nav-container {
-    max-width: 1200px;
     display: flex;
-    justify-content: center; /* Centers the group of links */
-    margin: 0 auto; /* Ensures the container itself is centered if max-width is reached */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .header-nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.8rem 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: background-color 0.2s ease;
-    display: inline-block;
-    text-align: center;
+    transition: all 0.2s ease;
 }
 
 .header-nav a:hover {
-    background-color: #333; 
-    color: #ffffff;
-    text-decoration: none;
+    background-color: #002857;
+    border-color: #002857;
 }
 
-/* 3. Main Layout */
+/* 3. Main Content Area */
 #game-container {
     display: flex;
     flex: 1;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    #game-container {
+        flex-direction: column;
+        overflow-y: auto;
+    }
 }
 
 /* 4. The Workspace (The Fridge) */
@@ -88,39 +107,41 @@ header {
     background-color: #e9ecef;
     background-image: radial-gradient(#ced4da 1px, transparent 1px);
     background-size: 24px 24px;
-    cursor: default;
     overflow: hidden;
+    cursor: default;
 }
 
-/* 5. The Magnetic Tiles */
+@media (max-width: 768px) {
+    #workspace {
+        height: 55vh;
+        min-height: 400px;
+        border-bottom: 1px solid #dee2e6;
+    }
+}
+
+/* 5. Magnetic Tiles */
 .tile {
     position: absolute;
-    padding: 7px 14px;
+    padding: 8px 16px;
     background-color: #ffffff;
     color: #1a1a1a;
     border: 1px solid #adb5bd;
-    border-radius: 1px;
+    border-radius: 2px;
     font-size: 14px;
     font-weight: 500;
     cursor: grab;
     user-select: none;
-    box-shadow: 2px 2px 0px rgba(13, 33, 52, 0.2); 
+    box-shadow: 2px 2px 0px rgba(13, 33, 52, 0.2);
     white-space: nowrap;
+    touch-action: none; /* Prevents scrolling while dragging on mobile */
     transition: transform 0.05s ease, box-shadow 0.1s ease;
-    touch-action: none; /* Critical: Prevents the page from scrolling while dragging a tile */
-}
-}
-
-.tile:hover {
-    border-color: #002857; 
-    background-color: #fdfdfd;
 }
 
 .tile:active {
     cursor: grabbing;
     box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
-    z-index: 1000;
-    transform: scale(1.02);
+    z-index: 2000 !important;
+    transform: scale(1.05);
 }
 
 /* 6. Sidebar (Info Panel) */
@@ -134,14 +155,21 @@ header {
     overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+    #info-panel {
+        width: 100%;
+        height: auto;
+        border-left: none;
+    }
+}
+
 #info-panel h2 {
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
-    color: #002857; 
-    border-bottom: 3px solid #0d2134; 
+    color: #002857;
+    border-bottom: 3px solid #0d2134;
     padding-bottom: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .placeholder {
@@ -154,14 +182,11 @@ header {
     border: 1px dashed #dee2e6;
 }
 
-#citation-list {
-    list-style: none;
-}
-
 #citation-list li {
     margin-bottom: 1.2rem;
-    padding-bottom: 1rem;
+    list-style: none;
     border-bottom: 1px solid #f1f3f5;
+    padding-bottom: 0.8rem;
 }
 
 #citation-list a {
@@ -169,16 +194,13 @@ header {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    display: block;
-    line-height: 1.4;
 }
 
 #citation-list a:hover {
-    color: #0d2134;
     text-decoration: underline;
 }
 
-/* 7. Buttons */
+/* 7. Controls */
 .controls {
     margin-top: auto;
     display: grid;
@@ -190,12 +212,12 @@ header {
 button {
     padding: 12px;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.2s;
+    font-weight: 700;
+    font-size: 0.85rem;
     text-transform: uppercase;
+    transition: all 0.2s;
 }
 
 #refresh-btn {
@@ -203,51 +225,11 @@ button {
     color: white;
 }
 
-#refresh-btn:hover {
-    background-color: #0d2134;
-}
-
 #share-btn {
-    background-color: #0d2134;
+    background-color: #002857;
     color: white;
 }
 
-#share-btn:hover {
-    background-color: #333;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    #game-container {
-        flex-direction: column; /* Stack workspace on top of sidebar */
-        overflow-y: auto;
-    }
-
-    #workspace {
-        height: 60vh; /* Give the fridge a fixed height on mobile */
-        min-height: 400px;
-        width: 100%;
-        border-bottom: 2px solid #dee2e6;
-    }
-
-    #info-panel {
-        width: 100%; /* Sidebar takes full width below the fridge */
-        height: auto;
-        border-left: none;
-        padding: 1rem;
-    }
-
-    .header-branding h1 {
-        font-size: 1.3rem;
-    }
-
-    .nav-container {
-        flex-wrap: wrap; /* Allow nav links to stack if they're too wide */
-        gap: 5px;
-    }
-
-    .header-nav a {
-        padding: 0.6rem 1rem;
-        font-size: 0.7rem;
-    }
+button:hover {
+    filter: brightness(1.5);
 }
