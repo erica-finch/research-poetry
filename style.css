@@ -6,8 +6,9 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f9fa; /* Slightly warmer gray for better contrast with navy */
+    /* Updated to include Lato as the primary font */
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -17,14 +18,14 @@ body {
 
 /* Reset Header to stack vertically */
 header {
-    display: block; /* Overrides previous flex setting */
+    display: block;
     padding: 0;
     border-bottom: none;
 }
 
-/* 1. The Branding Bar (Light Steel Blue) */
+/* 1. The Branding Bar (Lighter Blue: #002857) */
 .header-branding {
-    background-color: #185186; /* Steel Blue */
+    background-color: #002857; 
     padding: 1.2rem 2rem;
     color: #ffffff;
 }
@@ -32,25 +33,25 @@ header {
 .header-branding h1 {
     font-size: 1.6rem;
     margin-bottom: 0.15rem;
-    color: #ffffff;
+    color: #ffffff; /* White text as requested */
 }
 
 .header-branding p {
     font-size: 0.85rem;
-    color: #ffffff;
+    color: #ffffff; /* White text as requested */
 }
 
-/* 2. The Navigation Bar (Dark Navy) */
+/* 2. The Navigation Bar (Darker Blue: #0d2134) */
 .header-nav {
-    background-color: #023360; /* Deep Navy */
-    padding: 0.6rem 2rem;
+    background-color: #0d2134; 
+    padding: 0; /* Padding removed here to allow links to fill the height */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-container {
-    max-width: 1200px; /* Aligns buttons if screen is very wide */
+    max-width: 1200px;
     display: flex;
-    gap: 20px;
+    /* No gap used here so the hover boxes can touch if desired */
 }
 
 .header-nav a {
@@ -58,14 +59,18 @@ header {
     text-decoration: none;
     font-size: 0.75rem;
     font-weight: 700;
+    padding: 0.8rem 1.5rem; /* Creates the "box" area for the hover */
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    transition: opacity 0.2s;
+    transition: background-color 0.2s ease;
+    display: inline-block;
 }
 
+/* Hover effect: Box turns from Dark Blue to Grey (#333) */
 .header-nav a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+    background-color: #333; 
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* 3. Main Layout */
@@ -93,18 +98,18 @@ header {
     background-color: #ffffff;
     color: #1a1a1a;
     border: 1px solid #adb5bd;
-    border-radius: 1px; /* Sharp corners for a more formal look */
+    border-radius: 1px;
     font-size: 14px;
     font-weight: 500;
     cursor: grab;
     user-select: none;
-    box-shadow: 2px 2px 0px rgba(2, 51, 96, 0.15); /* Tinted navy shadow */
+    box-shadow: 2px 2px 0px rgba(13, 33, 52, 0.2); /* Updated shadow to match darker blue */
     white-space: nowrap;
     transition: transform 0.05s ease, box-shadow 0.1s ease;
 }
 
 .tile:hover {
-    border-color: #185186; /* Accent Steel Blue */
+    border-color: #002857; /* Matches lighter blue */
     background-color: #fdfdfd;
 }
 
@@ -112,7 +117,7 @@ header {
     cursor: grabbing;
     box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
     z-index: 1000;
-    transform: scale(1.02); /* Slight lift effect */
+    transform: scale(1.02);
 }
 
 /* 6. Sidebar (Info Panel) */
@@ -129,8 +134,8 @@ header {
 #info-panel h2 {
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
-    color: #023360;
-    border-bottom: 3px solid #185186; /* Steel Blue accent bar */
+    color: #002857; /* Matches lighter blue */
+    border-bottom: 3px solid #0d2134; /* Matches darker blue */
     padding-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -157,7 +162,7 @@ header {
 }
 
 #citation-list a {
-    color: #185186; /* Use accent blue for links */
+    color: #002857;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -166,7 +171,7 @@ header {
 }
 
 #citation-list a:hover {
-    color: #023360;
+    color: #0d2134;
     text-decoration: underline;
 }
 
@@ -191,19 +196,19 @@ button {
 }
 
 #refresh-btn {
-    background-color: #185186; /* Steel Blue */
+    background-color: #002857; /* Lighter Blue */
     color: white;
 }
 
 #refresh-btn:hover {
-    background-color: #023360; /* Darkens to Navy on hover */
+    background-color: #0d2134; /* Darker Blue on hover */
 }
 
 #share-btn {
-    background-color: #023360; /* Navy */
+    background-color: #0d2134; /* Darker Blue */
     color: white;
 }
 
 #share-btn:hover {
-    background-color: #011c35;
+    background-color: #333; /* Matches nav hover grey */
 }
