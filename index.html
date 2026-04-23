@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Poetry - NOSM University</title>
+    <title>Research Poetry | NOSM University</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <p>Drag words to create a poem. Click a word to see the research behind it.</p>
     </div>
 
-    <nav class="header-nav">
+    <nav class="header-nav" aria-label="Secondary Navigation">
         <div class="nav-container">
             <a href="https://libraryguides.nosm.ca/AnnFacPubs" target="_blank">Explore more research from NOSM U</a>
             <a href="bibliography.html" target="_blank">Game bibliography</a>
@@ -22,25 +22,26 @@
         </div>
     </nav>
 </header>
-    <main id="game-container">
-        <div id="workspace"></div>
 
-        <aside id="info-panel">
-            <section class="citation-section">
-                <h2>Citations</h2>
-                <div id="citation-display">
-                    <p class="placeholder">Click a word tile to explore related papers.</p>
-                    <ul id="citation-list"></ul>
-                </div>
-            </section>
-            
-            <div class="controls">
-                <button id="refresh-btn">Refresh Words</button>
-                <button id="share-btn">Share Poem</button>
+<main id="game-container">
+    <div id="workspace" aria-label="Poetry Workspace"></div>
+
+    <aside id="info-panel">
+        <section class="citation-section">
+            <h2>Citations</h2>
+            <div id="citation-display">
+                <p class="placeholder">Click a word tile to explore related papers.</p>
+                <ul id="citation-list"></ul>
             </div>
-        </aside>
-    </main>
+        </section>
+        
+        <div class="controls">
+            <button type="button" id="refresh-btn">Refresh Words</button>
+            <button type="button" id="share-btn">Share Poem</button>
+        </div>
+    </aside>
+</main>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
