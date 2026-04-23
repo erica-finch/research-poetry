@@ -15,25 +15,57 @@ body {
     overflow: hidden;
 }
 
-/* 2. Header - Institutional Identity */
+/* Reset Header to stack vertically */
 header {
-    background-color: #023360; /* Primary Institutional Navy */
+    display: block; /* Overrides previous flex setting */
+    padding: 0;
+    border-bottom: none;
+}
+
+/* 1. The Branding Bar (Light Steel Blue) */
+.header-branding {
+    background-color: #185186; /* Steel Blue */
     padding: 1.2rem 2rem;
     color: #ffffff;
-    text-align: left; /* Aligned left for a more professional dashboard look */
+}
+
+.header-branding h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.15rem;
+    color: #ffffff;
+}
+
+.header-branding p {
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+/* 2. The Navigation Bar (Dark Navy) */
+.header-nav {
+    background-color: #023360; /* Deep Navy */
+    padding: 0.6rem 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    font-size: 1.6rem;
-    color: #ffffff;
-    margin-bottom: 0.15rem;
-    letter-spacing: -0.02em;
+.nav-container {
+    max-width: 1200px; /* Aligns buttons if screen is very wide */
+    display: flex;
+    gap: 20px;
 }
 
-header p {
-    font-size: 0.85rem;
-    color: #ffffff; /* Light blue-gray for the subheader */
+.header-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+.header-nav a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 /* 3. Main Layout */
