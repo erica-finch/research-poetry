@@ -1,6 +1,12 @@
 // Configuration and State
 let wordIndex = {};
-const fillerWords = ['the', 'the', 'is', 'is', 'and', 'and', 'of', 'in', 'to', 'with', 'a', 'on', 'for', 'at', 'by', 'from', 'it', 'was', 'ing', 's'];
+/**
+ * [EDIT] Configuration and State
+ * Update 'fillerWords' to include connective tissue (prepositions, articles) 
+ * that fit your specific academic discipline or language.
+ */
+const fillerWords = ['the', 'is', 'are', 'and', 'an', 'of', 'in', 'to', 'with', 'a', 'on', 'for', 'at', 'by', 'from', 'it', 'was', 'ing', 's'];
+
 const workspace = document.getElementById('workspace');
 const citationList = document.getElementById('citation-list');
 const placeholder = document.querySelector('.placeholder');
@@ -58,6 +64,11 @@ function loadSharedPoem(encodedData) {
 // 2. Select Words and Create Tiles
 function generateBoard() {
     workspace.innerHTML = ''; // Clear current board
+
+    /**
+ * [EDIT] You can change the '.slice(0, 25)' value to increase or decrease 
+ * the number of research-specific words that appear on a fresh board.
+ */
     
     // Get a random sample of research words
     const researchKeys = Object.keys(wordIndex);
@@ -91,7 +102,7 @@ function createTile(word) {
     tile.addEventListener('click', () => showCitations(word));
 
     workspace.appendChild(tile);
-    return tile; // CRITICAL: This allows other functions to manipulate the tile
+    return tile;
 }
 
 // 4. Drag Logic
@@ -118,7 +129,6 @@ function startDrag(e) {
         moveAt(moveEvent.pageX, moveEvent.pageY);
     }
 
-    // Add listeners to document so dragging doesn't "break" if mouse moves too fast
     document.addEventListener('mousemove', onMove);
     document.addEventListener('touchmove', onMove, { passive: false });
 
@@ -136,7 +146,6 @@ function startDrag(e) {
 
 // 5. Citation Logic
 function showCitations(word) {
-    // Basic normalization to find the root key in JSON
     const root = word.toLowerCase();
     const citations = wordIndex[root] || [];
 
@@ -162,7 +171,6 @@ document.getElementById('share-btn').addEventListener('click', () => {
     const boardState = [];
 
     tiles.forEach(tile => {
-        // Store as [word, x, y] to save character space
         boardState.push([
             tile.innerText, 
             parseInt(tile.style.left), 
