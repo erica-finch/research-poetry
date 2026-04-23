@@ -64,9 +64,13 @@ function createTile(word) {
     tile.classList.add('tile');
     tile.innerText = word;
 
-    // Default random position (will be overridden if loading a shared poem)
-    const x = Math.random() * (workspace.clientWidth - 100);
-    const y = Math.random() * (workspace.clientHeight - 40);
+    // Use current workspace dimensions to prevent spawning off-screen
+    const maxWidth = workspace.clientWidth - 120; // 120px buffer for tile width
+    const maxHeight = workspace.clientHeight - 50; // 50px buffer for tile height
+    
+    const x = Math.max(10, Math.random() * maxWidth);
+    const y = Math.max(10, Math.random() * maxHeight);
+    
     tile.style.left = `${x}px`;
     tile.style.top = `${y}px`;
 
