@@ -6,6 +6,7 @@
 }
 
 body {
+    /* EDIT: Change fonts here to match your institution's style guide */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;
@@ -17,14 +18,16 @@ body {
 
 /* 2. Unified Header (Consolidated Branding & Nav) */
 header {
-    background-color: #0d2134;
+    /* EDIT: Replace #0d2134 (Dark Blue) with your primary institutional color */
+    background-color: #0d2134; 
     color: #ffffff;
     padding: 1rem 2rem;
     display: flex;
-    flex-direction: column; /* Stacked on mobile by default */
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border-bottom: 4px solid #002857;
+    /* EDIT: Replace #002857 (Light Blue) with your secondary accent color */
+    border-bottom: 4px solid #002857; 
     z-index: 10;
 }
 
@@ -82,6 +85,7 @@ header {
 }
 
 .header-nav a:hover {
+    /* EDIT: Hover color for navigation buttons */
     background-color: #002857;
     border-color: #002857;
     filter: brightness(1.5);
@@ -105,6 +109,7 @@ header {
 #workspace {
     position: relative;
     flex: 1;
+    /* EDIT: Change background color of the 'fridge' here */
     background-color: #e9ecef;
     background-image: radial-gradient(#ced4da 1px, transparent 1px);
     background-size: 24px 24px;
@@ -132,9 +137,10 @@ header {
     font-weight: 500;
     cursor: grab;
     user-select: none;
-    box-shadow: 2px 2px 0px rgba(13, 33, 52, 0.2);
+    /* EDIT: Change the tile's shadow color to match your brand */
+    box-shadow: 2px 2px 0px rgba(13, 33, 52, 0.2); 
     white-space: nowrap;
-    touch-action: none; /* Prevents scrolling while dragging on mobile */
+    touch-action: none;
     transition: transform 0.05s ease, box-shadow 0.1s ease;
 }
 
@@ -167,8 +173,10 @@ header {
 #info-panel h2 {
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
-    color: #002857;
-    border-bottom: 3px solid #0d2134;
+    /* EDIT: Sidebar heading color */
+    color: #002857; 
+    /* EDIT: Sidebar heading underline color */
+    border-bottom: 3px solid #0d2134; 
     padding-bottom: 0.5rem;
     text-transform: uppercase;
 }
@@ -191,6 +199,7 @@ header {
 }
 
 #citation-list a {
+    /* EDIT: Link color in the citation list */
     color: #002857;
     text-decoration: none;
     font-weight: 600;
@@ -222,11 +231,13 @@ button {
 }
 
 #refresh-btn {
+    /* EDIT: 'Refresh' button color */
     background-color: #002857;
     color: white;
 }
 
 #share-btn {
+    /* EDIT: 'Share' button color */
     background-color: #002857;
     color: white;
 }
