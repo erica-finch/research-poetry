@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliography - Poetry in Research</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific overrides for a readable list */
+        body { overflow-y: auto; height: auto; padding: 2rem; }
+        .bib-container { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border: 1px solid #ddd; }
+        h1 { color: #023360; margin-bottom: 1rem; }
+        ul { list-style: none; }
+        li { margin-bottom: 1.5rem; line-height: 1.6; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+        a { color: #185186; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="bib-container">
+        <h1>Game Bibliography</h1>
+        <p>The following publications from NOSM University faculty were used to generate the word bank for <strong>Poetry in Research</strong>.</p>
+        <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #eee;">
+        <ul id="full-bibliography-list">
+            <li>Loading research data...</li>
+        </ul>
+        <p style="margin-top: 3rem;"><a href="index.html">← Back to the Game</a></p>
+    </div>
+
+    <script>
+        // Fetch and display the citations
+        async function loadBibliography() {
+            try {
+                const response = await fetch('./data/word_data.json');
+                const wordIndex = await response.json();
+                const bibList = document.getElementById('full-bibliography-list');
+                
+                // Use a Map to get unique citations by DOI
+                const allCitations = new Map();
+                Object.values(wordIndex).forEach(citations => {
+                    citations.forEach(c => {
+                        allCitations.set(c.doi, c.title);
+                    });
+                });
+
+                bibList.innerHTML = ''; // Clear loading message
+
+                // Sort titles alphabetically
+                const sortedCitations = Array.from(allCitations).sort((a, b) => a[1].localeCompare(b[1]));
+
+                sortedCitations.forEach(([doi, title]) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${doi}" target="_blank">${title}</a>`;
+                    bibList.appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error loading bibliography:", error);
+            }
+        }
+        loadBibliography();
+    </script>
+</body>
+</html>
