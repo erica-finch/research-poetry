@@ -264,6 +264,6 @@ button:hover {
     transition: all 0.2s;
 }
 
-contest-btn:hover {
+.contest-btn:hover {
     filter: brightness(1.5);
 }
