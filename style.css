@@ -244,3 +244,14 @@ button {
 button:hover {
     filter: brightness(1.5);
 }
+
+.contest-btn { /* EDIT: You can remove this block if you are not running a contest. Also remove the Contest button from index.html. */
+    grid-column: span 2;
+    background-color: #c82333; /* EDIT: A different color to make it pop */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
