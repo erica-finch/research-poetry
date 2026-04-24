@@ -17,7 +17,7 @@ This repository is designed as a tool for libraries, research offices, and other
 You can replace the default words with your own institution's data using the Python tool.
 
 **Step A: Generate your Data**
-Use our python script to convert your citation spreadsheet into the required game format. Clicking the Google Colab link will open the script in Colab and let you run it.
+Use our python script to convert your citation spreadsheet into the required game format. Clicking the Open in Colab link will open the script in Colab and let you run it.
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/erica-finch/research-poetry/blob/main/tools/data_generator.ipynb)
 
 1. Upload a CSV of your publications (must include columns for `title` and `doi`).
