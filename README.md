@@ -41,11 +41,7 @@ Use our Google Colab script to convert your citation spreadsheet into the requir
 * `bibliography.html` - A static list of all citations included in the game.
 
 ## Mobile Functionality
-Works best on desktop, however the game is fully responsive. On mobile devices:
-* The header condenses to save space.
-* The workspace occupies the top half of the screen.
-* The citation panel moves to the bottom for easy scrolling.
-* Tiles use `touch-action` to ensure smooth dragging without accidental page scrolling.
+This game is intended for desktop or tablet. It doesn't scale well to mobile screens.
 
 ## Credits
 Built by [Erica Finch](https://github.com/erica-finch) using Google Gemini.
