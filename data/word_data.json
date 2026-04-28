@@ -743,10 +743,6 @@
       "doi": "https://doi.org/10.1093/ibd/izaf050"
     },
     {
-      "title": "Association of Plasma Biomarkers With Longitudinal Atrophy and Microvascular Burden on MRI Across Neurodegenerative and Cerebrovascular Diseases",
-      "doi": "https://doi.org/10.1212/WNL.0000000000213438"
-    },
-    {
       "title": "Combination Antithrombotic Therapy for Reduction of Recurrent Ischemic Stroke in Intracranial Atherosclerotic Disease",
       "doi": "https://doi.org/10.1161/STROKEAHA.124.047715"
     },
@@ -761,6 +757,10 @@
     {
       "title": "Lower circadian rhythmicity of rest-activity patterns is associated with a higher risk of chronic kidney disease in older adults",
       "doi": "https://doi.org/10.1080/07420528.2025.2584191"
+    },
+    {
+      "title": "Management of acute decompensated valvular heart disease",
+      "doi": "https://doi.org/10.1002/ejhf.3549"
     }
   ],
   "patient": [
@@ -2085,7 +2085,7 @@
       "doi": "https://doi.org/10.1097/MS9.0000000000003532"
     }
   ],
-  "metastase": [
+  "metastas": [
     {
       "title": "HYPOFRACTIONATED STEREOTACTIC RADIATION THERAPY (HFSRT) TO LARGE BRAIN METASTASES AND RESECTION CAVITIES FOR BRAIN METASTATIC LESIONS",
       "doi": "https://doi.org/10.1016/S0167-8140(25)04829-7"
@@ -3443,7 +3443,7 @@
       "doi": "https://doi.org/10.1016/j.freeradbiomed.2025.10.122"
     }
   ],
-  "sensitize": [
+  "sensitiz": [
     {
       "title": "Auranofin Synergistically Sensitizes KEAP1 Mutant and WT NSCLCs to P-AscH--induced Cell Killing by a Thiol and H2O2 Dependent Mechanism",
       "doi": "https://doi.org/10.1016/j.freeradbiomed.2025.10.122"
@@ -3791,21 +3791,13 @@
       "doi": "https://doi.org/10.1007/s12029-025-01335-4"
     }
   ],
-  "kinase": [
+  "kinas": [
     {
       "title": "Inhibition of serotonin biosynthesis and tyrosine kinases suppresses tumor growth of neuroendocrine neoplasm Free",
       "doi": "https://doi.org/10.1158/1538-7445.AM2025-LB465"
-    },
-    {
-      "title": "Continuing Cyclin-Dependent Kinase 4/6 Inhibitors Beyond Progression in Advanced Breast Cancer: A Meta-Analysis",
-      "doi": "https://doi.org/10.3390/cancers17101609"
-    },
-    {
-      "title": "The Landscape of Genomic Alterations in Receptor Tyrosine Kinase Pathways in Biliary Cancers: Implications for Targeted Therapies",
-      "doi": "https://doi.org/10.1007/s12029-025-01335-4"
     }
   ],
-  "suppresse": [
+  "suppress": [
     {
       "title": "Inhibition of serotonin biosynthesis and tyrosine kinases suppresses tumor growth of neuroendocrine neoplasm Free",
       "doi": "https://doi.org/10.1158/1538-7445.AM2025-LB465"
@@ -4703,6 +4695,10 @@
     {
       "title": "Guidance for Prenatal, Postnatal and Neonatal Immunohematology Testing in Canada: Consensus Recommendations from a Modified Delphi Process",
       "doi": "https://doi.org/10.1016/j.jogc.2025.103088"
+    },
+    {
+      "title": "Interventions to Modify Psychological Processes in Patients Undergoing Spine Surgery: A Systematic Review",
+      "doi": "https://doi.org/10.1177/21925682251318958"
     }
   ],
   "rsv": [
@@ -6459,7 +6455,7 @@
       "doi": "https://doi.org/10.1080/09581596.2025.2489466"
     }
   ],
-  "approache": [
+  "approach": [
     {
       "title": "Advancing culturally competent medical education: decolonizing approaches to indigenous health as a human rights imperative",
       "doi": "https://doi.org/10.1080/09581596.2025.2489466"
@@ -6469,8 +6465,16 @@
       "doi": "https://doi.org/10.3390/jcm14041099"
     },
     {
+      "title": "Enhancing Cardiopulmonary Resuscitation Quality Using a Smartwatch: Neural Network Approach for Algorithm Development and Validation",
+      "doi": "https://doi.org/10.2196/57469"
+    },
+    {
       "title": "Management Approaches to Intraluminal Thrombi in Acutely Symptomatic Carotid Stenosis",
       "doi": "https://doi.org/10.1017/cjn.2024.348"
+    },
+    {
+      "title": "Optimizing the Prediction of Depression Remission: A Longitudinal Machine Learning Approach",
+      "doi": "https://doi.org/10.1002/ajmg.b.33014"
     },
     {
       "title": "The Occasional insertion of intrauterine devices: new approaches",
@@ -6479,6 +6483,10 @@
     {
       "title": "Unpacking educational approaches for social accountability in health professions education: a scoping review",
       "doi": "https://doi.org/10.1007/s10459-025-10494-9"
+    },
+    {
+      "title": "Wiinaadmowing Etchi Piitzijig Enda'aat: Helping Elders Where They Live - An Anishinabek Community-Based Participatory Research Approach to Understanding Community-Level Sup-ports During the COVID-19 Pandemic",
+      "doi": "https://doi.org/10.32799/ijih.v20i1.43270"
     }
   ],
   "indigenous": [
@@ -7674,6 +7682,12 @@
     }
   ],
   "neurodegenerative": [
+    {
+      "title": "Association of Plasma Biomarkers With Longitudinal Atrophy and Microvascular Burden on MRI Across Neurodegenerative and Cerebrovascular Diseases",
+      "doi": "https://doi.org/10.1212/WNL.0000000000213438"
+    }
+  ],
+  "diseas": [
     {
       "title": "Association of Plasma Biomarkers With Longitudinal Atrophy and Microvascular Burden on MRI Across Neurodegenerative and Cerebrovascular Diseases",
       "doi": "https://doi.org/10.1212/WNL.0000000000213438"
@@ -9041,10 +9055,6 @@
     {
       "title": "Type II diabetes miletus: Does it increase the chance to fail the first trail of void following transurethral resection of prostate (TURP)?",
       "doi": "https://doi.org/10.4103/ua.ua_107_23"
-    },
-    {
-      "title": "Targeting CXCR4 with 212Pb/203Pb-Pentixather Significantly Increases Overall Survival in Small Cell Lung Cancer",
-      "doi": "https://doi.org/10.1667/RADE-24-00232.1"
     }
   ],
   "daily": [
@@ -9359,20 +9369,8 @@
       "doi": "https://doi.org/10.3389/fonc.2025.1485386"
     },
     {
-      "title": "Telemedicine Teaching for Everyone? Comparing Responses of Medical Students and Residents with a Shared Curriculum",
-      "doi": "https://doi.org/10.1089/tmr.2024.0070"
-    },
-    {
-      "title": "FRA1 (FOSL1) suppresses neoplastic transformation and modulates radiation responses via transcriptional control of mitogenic and stress-responsive networks",
-      "doi": "https://doi.org/10.3389/fcell.2025.1659986"
-    },
-    {
       "title": "Growth Restriction in Balb/c Mice Irradiated With X-Rays During Late Gestation: Role of Irradiation Timing, Dose Fractionation and Adaptive Response",
       "doi": "https://doi.org/10.1177/15593258251395327"
-    },
-    {
-      "title": "Minimal Impact of Prior Common Cold Coronavirus Exposure on Immune Responses to Severe Acute Respiratory Syndrome Coronavirus 2 Vaccination or Infection Risk in Older Adults in Congregate Care",
-      "doi": "https://doi.org/10.1093/ofid/ofaf178"
     },
     {
       "title": "Xanthine oxidoreductase expression is diminished in breast cancer as a response to uric acid mediated chelation of redox active iron",
@@ -10689,6 +10687,16 @@
     {
       "title": "Continuing Cyclin-Dependent Kinase 4/6 Inhibitors Beyond Progression in Advanced Breast Cancer: A Meta-Analysis",
       "doi": "https://doi.org/10.3390/cancers17101609"
+    }
+  ],
+  "kinase": [
+    {
+      "title": "Continuing Cyclin-Dependent Kinase 4/6 Inhibitors Beyond Progression in Advanced Breast Cancer: A Meta-Analysis",
+      "doi": "https://doi.org/10.3390/cancers17101609"
+    },
+    {
+      "title": "The Landscape of Genomic Alterations in Receptor Tyrosine Kinase Pathways in Biliary Cancers: Implications for Targeted Therapies",
+      "doi": "https://doi.org/10.1007/s12029-025-01335-4"
     }
   ],
   "inhibitor": [
@@ -12383,24 +12391,6 @@
       "doi": "https://doi.org/10.1016/j.scitotenv.2025.180200"
     }
   ],
-  "approach": [
-    {
-      "title": "Enhancing Cardiopulmonary Resuscitation Quality Using a Smartwatch: Neural Network Approach for Algorithm Development and Validation",
-      "doi": "https://doi.org/10.2196/57469"
-    },
-    {
-      "title": "Optimizing the Prediction of Depression Remission: A Longitudinal Machine Learning Approach",
-      "doi": "https://doi.org/10.1002/ajmg.b.33014"
-    },
-    {
-      "title": "Wiinaadmowing Etchi Piitzijig Enda'aat: Helping Elders Where They Live - An Anishinabek Community-Based Participatory Research Approach to Understanding Community-Level Sup-ports During the COVID-19 Pandemic",
-      "doi": "https://doi.org/10.32799/ijih.v20i1.43270"
-    },
-    {
-      "title": "Adapting the alcohol and alcohol problems perception questionnaire and the drug and drug problems perception questionnaire: A psychometric analysis of a person-centred approach",
-      "doi": "https://doi.org/10.1016/j.dadr.2025.100366"
-    }
-  ],
   "algorithm": [
     {
       "title": "Enhancing Cardiopulmonary Resuscitation Quality Using a Smartwatch: Neural Network Approach for Algorithm Development and Validation",
@@ -13063,7 +13053,7 @@
       "doi": "https://doi.org/10.12968/ijpn.2025.0031"
     }
   ],
-  "nurse": [
+  "nurs": [
     {
       "title": "Feasibility and outcomes of point-of-care ultrasound training for registered nurses in palliative care",
       "doi": "https://doi.org/10.12968/ijpn.2025.0031"
@@ -13071,10 +13061,6 @@
     {
       "title": "The burden of grief: A scoping review of nurses' and physicians' experiences throughout the COVID-19 pandemic",
       "doi": "https://doi.org/10.1080/07481187.2024.2306461"
-    },
-    {
-      "title": "Employing Kirkpatrick's framework to evaluate nurse training: an integrative review",
-      "doi": "https://doi.org/10.1590/1518-8345.7250.4431"
     }
   ],
   "retinopathy": [
@@ -14483,12 +14469,6 @@
       "doi": "https://doi.org/10.1177/21925682251318958"
     }
   ],
-  "processe": [
-    {
-      "title": "Interventions to Modify Psychological Processes in Patients Undergoing Spine Surgery: A Systematic Review",
-      "doi": "https://doi.org/10.1177/21925682251318958"
-    }
-  ],
   "undergoing": [
     {
       "title": "Interventions to Modify Psychological Processes in Patients Undergoing Spine Surgery: A Systematic Review",
@@ -15817,6 +15797,12 @@
       "doi": "https://doi.org/10.5489/cuaj.9188"
     }
   ],
+  "cas": [
+    {
+      "title": "Predictors of success and complications of monoplanar renal access for conventional prone percutaneous nephrolithotomy Analysis of 662 cases",
+      "doi": "https://doi.org/10.5489/cuaj.9188"
+    }
+  ],
   "supportive": [
     {
       "title": "Predictors of Supportive Care in Young Adults Diagnosed With a Gynaecologic Malignancy",
@@ -16157,7 +16143,7 @@
       "doi": "https://doi.org/10.7759/cureus.85649"
     }
   ],
-  "headache": [
+  "headach": [
     {
       "title": "Quality of Life and Prevalence of Impulsivity in Females With Migraine Headaches",
       "doi": "https://doi.org/10.7759/cureus.85649"
@@ -17015,6 +17001,20 @@
       "doi": "https://doi.org/10.1089/tmr.2024.0070"
     }
   ],
+  "respons": [
+    {
+      "title": "Telemedicine Teaching for Everyone? Comparing Responses of Medical Students and Residents with a Shared Curriculum",
+      "doi": "https://doi.org/10.1089/tmr.2024.0070"
+    },
+    {
+      "title": "FRA1 (FOSL1) suppresses neoplastic transformation and modulates radiation responses via transcriptional control of mitogenic and stress-responsive networks",
+      "doi": "https://doi.org/10.3389/fcell.2025.1659986"
+    },
+    {
+      "title": "Minimal Impact of Prior Common Cold Coronavirus Exposure on Immune Responses to Severe Acute Respiratory Syndrome Coronavirus 2 Vaccination or Infection Risk in Older Adults in Congregate Care",
+      "doi": "https://doi.org/10.1093/ofid/ofaf178"
+    }
+  ],
   "shared": [
     {
       "title": "Telemedicine Teaching for Everyone? Comparing Responses of Medical Students and Residents with a Shared Curriculum",
@@ -17565,7 +17565,7 @@
       "doi": "https://doi.org/10.1038/s41391-025-00996-3"
     }
   ],
-  "mose": [
+  "mos": [
     {
       "title": "Thulium fiber laser versus holmium MOSES\u2122 laser enucleation of the prostate for the treatment of benign prostatic hyperplasia: a randomized prospective clinical study",
       "doi": "https://doi.org/10.1038/s41391-025-00996-3"
@@ -18519,7 +18519,7 @@
       "doi": "https://doi.org/10.1002/ajpa.70048"
     }
   ],
-  "analyse": [
+  "analys": [
     {
       "title": "Childhood Lead Exposure in North Atlantic Fisheries: Concentration and Isotopic Analyses of Tooth Enamel From 18th to 19th Century Fishing Communities",
       "doi": "https://doi.org/10.1002/ajpa.70048"
@@ -18622,6 +18622,12 @@
     }
   ],
   "evaluate": [
+    {
+      "title": "Employing Kirkpatrick's framework to evaluate nurse training: an integrative review",
+      "doi": "https://doi.org/10.1590/1518-8345.7250.4431"
+    }
+  ],
+  "nurse": [
     {
       "title": "Employing Kirkpatrick's framework to evaluate nurse training: an integrative review",
       "doi": "https://doi.org/10.1590/1518-8345.7250.4431"
@@ -20430,6 +20436,12 @@
     }
   ],
   "significantly": [
+    {
+      "title": "Targeting CXCR4 with 212Pb/203Pb-Pentixather Significantly Increases Overall Survival in Small Cell Lung Cancer",
+      "doi": "https://doi.org/10.1667/RADE-24-00232.1"
+    }
+  ],
+  "increas": [
     {
       "title": "Targeting CXCR4 with 212Pb/203Pb-Pentixather Significantly Increases Overall Survival in Small Cell Lung Cancer",
       "doi": "https://doi.org/10.1667/RADE-24-00232.1"
